@@ -1,6 +1,6 @@
 # pcoo_ad23
-# Lilian Rodríguez Uribe 
-# A01711949
+Lilian Rodríguez Uribe 
+A01711949
 
 El proyecto que estoy realizando modela la interacción entre personas, específicamente estudiantes y profesores, mediante el uso de calses en C++. El propósito general del proyecto es proporcionar una estructura bastante básica para representar a individuos, con un enfoque en estudiantes y profesores y, permitir la ejecución de acciones relacionadas con la presentación, el estudio y la enseñanza.
 
