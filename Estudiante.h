@@ -1,35 +1,51 @@
-//Estudiante.h
-
 #ifndef ESTUDIANTE_H
 #define ESTUDIANTE_H
 
-#include "Persona.h"
 #include <iostream>
+#include <sstream>
+#include "Persona.h"
 
 using namespace std;
 
-class Estudiante : public Persona {
+class Estudiante: public Persona {
 
-private:
-//Atributos
-string curso;
+    private:
+        string curso;
 
-public:
-    //Constructor por omisión
-    Estudiante();
-    Estudiante(string nombre, int edad, string curso);
+    public:
+        Estudiante();
+        Estudiante(string, int, string);
 
-    // Método para estudiar
-    void estudiar();
-
+        string getCurso();
+        void setCurso(string);
+        string toString();
 };
 
-// Implementación de los métodos 
-Estudiante::Estudiante(string nombre, int edad, string curso)
-    : Persona(nombre, edad), curso(curso) {}
-
-void Estudiante::estudiar() {
-    cout << getNombre() << " está estudiando el curso de " << curso << "." << endl;
+Estudiante::Estudiante() {
+    curso = "";
 }
 
-#endif // ESTUDIANTE_H
+Estudiante::Estudiante(string _nombre, int _edad, string _curso):
+    Persona(_nombre, _edad) {
+        curso = _curso;
+}
+
+string Estudiante::getCurso() {
+    return curso;
+}
+
+void Estudiante::setCurso(string _curso) {
+    curso = _curso;
+}
+
+
+string Estudiante::toString() {
+    ostringstream salida;
+    // Es posible invocar el método de la clase padre para extender su funcionalidad
+    salida << Persona::toString();
+    salida << "Curso: " << curso << endl;
+
+    return salida.str();
+}
+
+#endif
