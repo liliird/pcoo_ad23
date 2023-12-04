@@ -27,6 +27,6 @@ Básicamente reestructuré todo el código, para poder incorporar herencia y com
 Asímismo volví a realizar mi diagrama de clases ya que estaba mal interpretado anteriormente
 
 # Sub-Competencias a evaluar: 
-SICT0302A
-SICT0303A
-SICT0401A
+1. SICT0302A
+2. SICT0303A
+3. SICT0401A
